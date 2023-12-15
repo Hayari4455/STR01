@@ -31,6 +31,7 @@ import pandas as pd
 dt=pd.read_csv('./data/iris.csv')
 st.write(dt.head(10))
 
+
 dt1 = dt['petal.length'].sum()
 dt2 = dt['petal.width'].sum()
 dt3 = dt['sepal.length'].sum()
@@ -51,7 +52,7 @@ html_2 = """
 </div>
 """
 st.markdown(html_2, unsafe_allow_html=True)
-st.markdown("")   
+st.markdown("")
 
 
 ptlen = st.slider("กรุณาเลือกข้อมูล petal.length",0,10)
@@ -67,11 +68,11 @@ if st.button("ทำนายผล"):
    # ทำนาย
    #dt = pd.read_csv("./data/iris.csv") 
 
-   x = dt.drop('variety', axis=1)
+   X = dt.drop('variety', axis=1)
    y = dt.variety   
 
    Knn_model = KNeighborsClassifier(n_neighbors=3)
-   Knn_model.fit(x, y)
+   Knn_model.fit(X, y)
 
     #ข้อมูล input สำหรับทดลองจำแนกข้อมูล
    x_input = np.array([[ptlen, ptwd, splen, spwd]])
@@ -80,14 +81,15 @@ if st.button("ทำนายผล"):
    out=Knn_model.predict(x_input)
 
    if out[0]=="Setosa":
-      #st.image("./pic/iris.jpg")
+      st.image("./pic/Irissetosa1.jpg")
       st.header("Setosa")
    elif out[0]=="Versicolor":
-      #st.image("./pic/iris2.jpg")
+      st.image("./pic/irisVersicolor.jpg")
       st.header("Versicolor")
    else:
-      #st.image("./pic/iris1.jpg")  
+      st.image("./pic/Irisvirginica.jpg")  
       st.header("Verginiga")
    st.button("ไม่ทำนายผล")
 else :
     st.button("ไม่ทำนายผล")
+    
