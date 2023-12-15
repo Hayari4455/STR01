@@ -1,10 +1,15 @@
+import json
+
 import streamlit as st
+from streamlit_lottie import st_lottie
 
 st.title('การทดสอบเขียนเว็บด้วย Python')
-st.header('ผศ.ดร.ไก้รุ่ง เฮงพระพรหม')
-st.subheader('สาขาวิชาวิทยาการข้อมูล')
+st.header('อติเทพ โกมุทฉาย')
+st.subheader('สาขาเทคโนโลยีสารสนเทศ')
 st.markdown("----")
 
+
+    return r.json()
 
 col1, col2 = st.columns(2)
 #col1.write("This is column 1")
@@ -25,7 +30,7 @@ st.markdown("")
 import pandas as pd
 
 dt=pd.read_csv('./data/iris.csv')
-st.write(dt.head(9))
+st.write(dt.head(10))
 
 dt1 = dt['petal.length'].sum()
 dt2 = dt['petal.width'].sum()
@@ -67,7 +72,7 @@ if st.button("ทำนายผล"):
    y = dt.variety   
 
    Knn_model = KNeighborsClassifier(n_neighbors=3)
-   Knn_model.fit(X, y)
+   Knn_model.fit(x, y)
 
     #ข้อมูล input สำหรับทดลองจำแนกข้อมูล
    x_input = np.array([[ptlen, ptwd, splen, spwd]])
