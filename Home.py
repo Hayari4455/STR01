@@ -25,7 +25,7 @@ st.markdown("")
 import pandas as pd
 
 dt=pd.read_csv('./data/iris.csv')
-st.write(dt.head(10))
+st.write(dt.head(9))
 
 dt1 = dt['petal.length'].sum()
 dt2 = dt['petal.width'].sum()
