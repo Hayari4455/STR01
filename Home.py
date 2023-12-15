@@ -65,9 +65,9 @@ import numpy as np
 
 if st.button("ทำนายผล"):
    # ทำนาย
-   dt = pd.read_csv("./data/iris.csv") 
+   #dt = pd.read_csv("./data/iris.csv") 
 
-   X = dt.drop('variety', axis=1)
+   x = dt.drop('variety', axis=1)
    y = dt.variety   
 
    Knn_model = KNeighborsClassifier(n_neighbors=3)
