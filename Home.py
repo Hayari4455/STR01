@@ -54,7 +54,7 @@ st.markdown("")
 import pandas as pd
 
 dt=pd.read_csv('./data/iris.csv')
->>>>>>> 266410faea2f166b8d5197423b16ff667fc3106d
+
 st.write(dt.head(10))
 
 dt1 = dt['petal.length'].sum()
