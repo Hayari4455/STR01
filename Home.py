@@ -25,7 +25,7 @@ st.markdown("")
 import pandas as pd
 
 dt=pd.read_csv('./data/iris.csv')
-=======
+
 import streamlit as st
 
 st.title('การทดสอบเขียนเว็บด้วย Python')
