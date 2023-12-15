@@ -1,7 +1,7 @@
-import json
+
 
 import streamlit as st
-from streamlit_lottie import st_lottie
+
 
 st.title('การทดสอบเขียนเว็บด้วย Python')
 st.header('อติเทพ โกมุทฉาย')
