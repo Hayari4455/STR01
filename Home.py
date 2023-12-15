@@ -1,7 +1,7 @@
 
 
 import streamlit as st
-
+st.balloons()
 
 st.title('การทดสอบเขียนเว็บด้วย Python')
 st.header('อติเทพ โกมุทฉาย')
